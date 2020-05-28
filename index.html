@@ -17,25 +17,19 @@
 				margin:3px;
 			}
 			
-			label{
-				margin-left:100px;
+			select{
+				margin-right:100px;
 			}
 		</style>
 	</head>
 	<body>
 		
-		<button id="btn" onclick="main()">GO</button>
-		
-		<label for="size">size:</label>
-		<select id="size">
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-		</select>
-		
+
+		<button id="gen" onclick="generateBoard()">Generate Board</button>
+
+		<button id="btn" onclick="GO()">Solve</button>
+		<button id="stop" onclick="stop()" disabled>STOP</button>
+
 		<label for="speed">speed:</label>
 		<select id="speed">
 			<option>0</option>
@@ -50,8 +44,46 @@
 			<option>9</option>
 		</select>
 
-		<label for="solutions">solutions:</label>
-		<select id="solutions" onchange="drawSolution(this)"></select>
+		<br/><br/>
+		<label for="rows">rows:</label>
+		<select id="rows">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+		</select>
+		
+		<label for="cols">cols:</label>
+		<select id="cols">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+		</select>
+		
+		<label for="goal">goal:</label>
+		<select id="goal">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+		</select>
+
 		
 		<hr />
 	
@@ -64,6 +96,29 @@
 			Green: Valid solution with all points.<br/>
 			Blue: valid but not all nodes are placed.
 		</p>
+
+		<label for="solutions">solutions:</label>
+		<select id="solutions" onchange="drawSolution(this)"></select>
+		
+		
+		<hr/>
+		
+		<p>
+			This is my workings out for this puzzle: http://www.think-maths.co.uk/uniquedistance
+		</p>
+		<p>
+			Generate Board: Builds an empty board of selected cols/rows.<br/>
+			Solve: Solves the board for the given rows/cols/goal.<br/>
+			STOP: Stops the Solver.<br/>
+			Speed: Delay in showing updates on the board (higher number is slower)<br/>
+			<br/>
+			rows: number of rows on the board.<br/>
+			cols: number of columns on the board.<br/>
+			goal: number of points you are trying to find uniqe distances of.<br/>
+			<br/>
+			solutions: found solutions from clicking the 'Solve' button. select one to draw it on the board.
+		</p>
+
 		<script src="UniqueDistances.js"></script>
 
 	</body>
