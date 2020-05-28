@@ -192,6 +192,8 @@ function disable(){
 	document.getElementById("rows").disabled = true;
 	document.getElementById("cols").disabled = true;
 	document.getElementById("speed").disabled = true
+	document.getElementById("goal").disabled = true;
+	document.getElementById("gen").disabled = true;
 	document.getElementById("stop").disabled = false;
 }
 
@@ -201,6 +203,8 @@ function enable(){
 	document.getElementById("rows").disabled = false;
 	document.getElementById("cols").disabled = false;
 	document.getElementById("speed").disabled = false
+	document.getElementById("goal").disabled = false;
+	document.getElementById("gen").disabled = false;
 	document.getElementById("stop").disabled = true;
 }
 
